@@ -1,0 +1,17 @@
+@host = http://localhost:4000
+
+### Test endpoint
+GET {{host}}/test
+
+### Create notification
+POST {{host}}/api/notifications
+Content-Type: application/json
+
+{
+  "userId": "user1",
+  "title": "Test",
+  "message": "Merhaba"
+}
+
+### Get user notifications
+GET {{host}}/api/notifications/user1
